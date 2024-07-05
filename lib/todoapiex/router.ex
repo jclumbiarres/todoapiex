@@ -11,11 +11,6 @@ defmodule Todoapiex.Router do
     json_decoder: Jason
   )
 
-  # get "/todos" do
-  #   todos = Todo.listar()
-  #   todos_json = Jason.encode!(todos)
-  #   send_resp(conn, 200, todos_json)
-  # end
   get "/todos" do
     todos = Todo.listar()
     todos_json = Jason.encode!(todos)
