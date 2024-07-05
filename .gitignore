@@ -24,3 +24,5 @@ todoapiex-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+todolistex_dev.db*
