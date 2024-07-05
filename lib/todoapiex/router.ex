@@ -31,7 +31,6 @@ defmodule Todoapiex.Router do
             send_resp(conn, 201, "Ok")
 
           {:error, _error} ->
-            IO.puts(body)
             send_resp(conn, 400, "Invalid JSON payload")
         end
 
