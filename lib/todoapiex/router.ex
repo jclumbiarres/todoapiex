@@ -1,4 +1,5 @@
 defmodule Todoapiex.Router do
+  alias Todoapiex.{Todo}
   use Plug.Router
 
   plug(:match)
@@ -11,7 +12,9 @@ defmodule Todoapiex.Router do
   )
 
   get "/todos" do
-    send_resp(conn, 200, Jason.encode!(%{todos: []}))
+    todos = Todo.listar()
+    todos_json = Jason.encode!(todos)
+    send_resp(conn, 200, todos_json)
   end
 
   match _ do
