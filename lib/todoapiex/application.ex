@@ -10,7 +10,8 @@ defmodule Todoapiex.Application do
     children = [
       # Starts a worker by calling: Todoapiex.Worker.start_link(arg)
       # {Todoapiex.Worker, arg}
-      {Plug.Cowboy, scheme: :http, plug: Todoapiex.Router, options: [port: 3000]}
+      {Plug.Cowboy, scheme: :http, plug: Todoapiex.Router, options: [port: 3000]},
+      {DataCollector.Repo, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
