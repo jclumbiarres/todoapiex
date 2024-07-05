@@ -1,5 +1,5 @@
 defmodule DataCollector.Repo do
-  use Ecto.Repo, otp_app: :todolistex, adapter: Ecto.Adapters.SQLite3
+  use Ecto.Repo, otp_app: :todoapiex, adapter: Ecto.Adapters.SQLite3
 end
 
 defmodule DataCollector.Todo do
